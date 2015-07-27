@@ -1,0 +1,30 @@
+group 'me.leolin'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '0.12.1218'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
+    }
+}
+
+project.subprojects {
+
+    apply plugin: "java"
+    apply plugin: "kotlin"
+
+    repositories {
+        mavenCentral()
+    }
+
+    sourceSets {
+        main.kotlin.srcDirs += 'src/main/kotlin'
+    }
+
+    dependencies {
+        compile "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}"
+    }
+}
