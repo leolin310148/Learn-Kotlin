@@ -16,6 +16,9 @@ fun main(args: Array<String>) {
     println("${book.name}")
     println("${book.author}")
     println("${book.price}")
+
 }
 
+
+data class Book(var name: String, var author: String, var price: Double)
 

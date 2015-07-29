@@ -7,7 +7,7 @@ import java.util.Arrays
  */
 
 fun main(args: Array<String>) {
-    var list = Arrays.asList("Jhon", "Jason", "Mary", "Leo", "Tina", "Java", "Justin")
+    var list = arrayOf("Jhon", "Jason", "Mary", "Leo", "Tina", "Java", "Justin")
     for (s in list) {
         println(s)
     }
@@ -27,7 +27,12 @@ fun main(args: Array<String>) {
     for ((k, v) in map) {
         println("$k : $v")
     }
+    println("-------")
 
     map.filter { it.key >= 2 }
-    .forEach {  }
+            .forEach { println(it) }
+    println("-------")
+
+    val asc = Array(5, { i -> (i * i).toString() })
+    asc.forEach { println(it) }
 }
